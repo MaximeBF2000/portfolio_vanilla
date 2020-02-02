@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto&display=swap');
+@import "./config.scss";
+
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  padding: 10px 15px;
+  border-radius: .25rem;
+}
+.btn-primary{
+  color: white;
+  background-color: $primary;
+}
+.btn-zoom{
+  transition: 0.3s;
+}
+.btn-zoom:hover{
+  transform: scale(1.15);
+}
+header{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/header_portfolio.jpg");
+  background-size: cover;
+  padding: 1rem;
+  color: #D3D3D3;
+
+  .profil_pic{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px lighten(black, 25%);
+  } 
+
+  .presentation{
+    text-align: center;
+
+    h1{
+      margin: .5rem 0;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+  }
+
+  .btn{
+    margin: 2rem 0;
+  }
+
+  .social_icons{
+    font-size: 1.8rem;
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+
+    .social_link{
+      transition: 0.3s;
+    }
+    .social_link:hover{
+      color: white;
+      transform: translateY(-10px);
+    }
+  }
+
+  .arrow_down{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    transition: 0.3s;
+    animation: arrow_bounce 2s infinite;
+  }
+  .arrow_down:hover{
+    color: white;
+  }
+}
+section.estimation{
+  background-color: $secondary;
+  display: flex;
+  padding: 2rem;
+
+  .estimation_text{
+    width: 70%;
+    h2{
+      font-size: 2rem;
+      font-family: $ff-secondary;
+    }
+  }
+  .estimation_callToAction{
+    @extend .center;
+    width: 30%;
+  }
+}
+section.services{
+  padding: 4rem;
+  width: 100%;
+
+  h2{
+    text-align: right;
+    margin-bottom: 3rem;
+  }
+
+  .services-box{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    .service-item{
+      position: relative;
+      background-color: $secondary;
+      height: 200px;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center center;
+
+      &::before{
+        transform: scaleY(0);
+        transition: 0.5s;
+        transform-origin: bottom;
+        content: attr(data-title);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(black, 0.5);
+        font-size: 1.5rem;
+        color: white;
+        text-align: center;
+        @extend .center;
+      }
+      &:hover::before{
+        transform: scaleY(1);
+      }
+      /* Services background Images */
+      &[data-title="Web Design"]{
+        background-image: url("../img/service_webdesign.jpg");
+      }
+      &[data-title="Marketing"]{
+        background-image: url("../img/service_marketing.jpg");
+      }
+      &[data-title="Modern Developpement"]{
+        background-image: url("../img/service_moderndev.jpg");
+      }
+      &[data-title="SEO"]{
+        background-image: url("../img/service_seo.png");
+      }
+      &[data-title="Social Medias"]{
+        background-image: url("../img/service_socialmedia.jpg");
+      }
+      &[data-title="Deployment"]{
+        background-image: url("../img/service_deployment.png");
+      }
+    }
+  }
+}

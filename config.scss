@@ -1,0 +1,35 @@
+/* Variables */
+$primary: #FF5733;
+$secondary: #D3D3D3;
+$ff-primary: 'Open Sans', 'Roboto', sans-serif;
+$ff-secondary: 'Montserrat',sans-serif;
+
+
+/* Global */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $ff-primary;
+}
+html{
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Animations */
+@keyframes arrow_bounce {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-15px);
+  }
+	60% {
+    transform: translateY(-7.5px);
+  }
+}

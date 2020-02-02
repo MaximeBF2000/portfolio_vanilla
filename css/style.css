@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto&display=swap");
+/* Variables */
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Animations */
+@-webkit-keyframes arrow_bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  60% {
+    -webkit-transform: translateY(-7.5px);
+            transform: translateY(-7.5px);
+  }
+}
+@keyframes arrow_bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  60% {
+    -webkit-transform: translateY(-7.5px);
+            transform: translateY(-7.5px);
+  }
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center, section.estimation .estimation_callToAction, section.services .services-box .service-item::before {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: .25rem;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #FF5733;
+}
+
+.btn-zoom {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn-zoom:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/header_portfolio.jpg");
+  background-size: cover;
+  padding: 1rem;
+  color: #D3D3D3;
+}
+
+header .profil_pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 20px #404040;
+          box-shadow: 1px 1px 20px #404040;
+}
+
+header .presentation {
+  text-align: center;
+}
+
+header .presentation h1 {
+  margin: .5rem 0;
+}
+
+header .presentation p {
+  font-size: 1.3rem;
+}
+
+header .btn {
+  margin: 2rem 0;
+}
+
+header .social_icons {
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .social_icons .social_link {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .social_icons .social_link:hover {
+  color: white;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+header .arrow_down {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: arrow_bounce 2s infinite;
+          animation: arrow_bounce 2s infinite;
+}
+
+header .arrow_down:hover {
+  color: white;
+}
+
+section.estimation {
+  background-color: #D3D3D3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+}
+
+section.estimation .estimation_text {
+  width: 70%;
+}
+
+section.estimation .estimation_text h2 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+section.estimation .estimation_callToAction {
+  width: 30%;
+}
+
+section.services {
+  padding: 4rem;
+  width: 100%;
+}
+
+section.services h2 {
+  text-align: right;
+  margin-bottom: 3rem;
+}
+
+section.services .services-box {
+  width: 80%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+section.services .services-box .service-item {
+  position: relative;
+  background-color: #D3D3D3;
+  height: 200px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  /* Services background Images */
+}
+
+section.services .services-box .service-item::before {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+section.services .services-box .service-item:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+section.services .services-box .service-item[data-title="Web Design"] {
+  background-image: url("../img/service_webdesign.jpg");
+}
+
+section.services .services-box .service-item[data-title="Marketing"] {
+  background-image: url("../img/service_marketing.jpg");
+}
+
+section.services .services-box .service-item[data-title="Modern Developpement"] {
+  background-image: url("../img/service_moderndev.jpg");
+}
+
+section.services .services-box .service-item[data-title="SEO"] {
+  background-image: url("../img/service_seo.png");
+}
+
+section.services .services-box .service-item[data-title="Social Medias"] {
+  background-image: url("../img/service_socialmedia.jpg");
+}
+
+section.services .services-box .service-item[data-title="Deployment"] {
+  background-image: url("../img/service_deployment.png");
+}
+/*# sourceMappingURL=style.css.map */
