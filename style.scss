@@ -26,7 +26,7 @@
 .btn-zoom{
   transition: 0.3s;
 }
-.btn-zoom:hover{
+.btn-zoom:hover, .btn-zoom:focus{
   transform: scale(1.15);
 }
 header{
@@ -68,9 +68,9 @@ header{
     .social_link{
       transition: 0.3s;
     }
-    .social_link:hover{
+    .social_link:hover, .social_link:focus{
       color: white;
-      transform: translateY(-10px);
+      transform: translateY(-5px);
     }
   }
 
@@ -80,7 +80,7 @@ header{
     transition: 0.3s;
     animation: arrow_bounce 2s infinite;
   }
-  .arrow_down:hover{
+  .arrow_down:hover, .arrow_down:focus{
     color: white;
   }
 }
@@ -115,7 +115,6 @@ section.services{
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-gap: 2rem;
 
     .service-item{
@@ -142,7 +141,7 @@ section.services{
         text-align: center;
         @extend .center;
       }
-      &:hover::before{
+      &:hover::before, &:focus::before{
         transform: scaleY(1);
       }
       /* Services background Images */
@@ -167,3 +166,6 @@ section.services{
     }
   }
 }
+
+
+@import "./responsive.scss"

@@ -1,0 +1,20 @@
+@media (max-width: 950px) {
+  section.services .services-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  section.services .services-box {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  section.services .services-box {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
