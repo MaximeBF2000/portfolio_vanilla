@@ -62,7 +62,7 @@ a {
           align-items: center;
 }
 
-.center, section.estimation .estimation_callToAction, section.services .services-box .service-item::before {
+.center, section.estimation .estimation_callToAction, section.services .services-box .service-item .service-logo {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,7 +180,7 @@ section.estimation .estimation_text {
 }
 
 section.estimation .estimation_text h2 {
-  font-size: 2rem;
+  font-size: x-large;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -194,12 +194,14 @@ section.services {
 }
 
 section.services h2 {
+  font-family: "Montserrat", sans-serif;
   text-align: right;
   margin-bottom: 3rem;
+  font-size: x-large;
 }
 
 section.services .services-box {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -210,60 +212,41 @@ section.services .services-box {
 
 section.services .services-box .service-item {
   position: relative;
-  background-color: #D3D3D3;
-  height: 200px;
+  padding: 1rem;
+  background-color: rgba(211, 211, 211, 0.3);
+  min-height: 250px;
   cursor: pointer;
   background-size: cover;
   background-position: center center;
-  /* Services background Images */
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-section.services .services-box .service-item::before {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  content: attr(data-title);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 1.5rem;
-  color: white;
+section.services .services-box .service-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 20px 10px lightgrey;
+          box-shadow: 0 0 20px 10px lightgrey;
+}
+
+section.services .services-box .service-item .service-logo {
+  color: #FF5733;
+  width: 100%;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+section.services .services-box .service-item .service-title {
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-section.services .services-box .service-item:hover::before, section.services .services-box .service-item:focus::before {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-}
-
-section.services .services-box .service-item[data-title="Web Design"] {
-  background-image: url("../img/service_webdesign.jpg");
-}
-
-section.services .services-box .service-item[data-title="Marketing"] {
-  background-image: url("../img/service_marketing.jpg");
-}
-
-section.services .services-box .service-item[data-title="Modern Developpement"] {
-  background-image: url("../img/service_moderndev.jpg");
-}
-
-section.services .services-box .service-item[data-title="SEO"] {
-  background-image: url("../img/service_seo.png");
-}
-
-section.services .services-box .service-item[data-title="Social Medias"] {
-  background-image: url("../img/service_socialmedia.jpg");
-}
-
-section.services .services-box .service-item[data-title="Deployment"] {
-  background-image: url("../img/service_deployment.png");
+section.services .services-box .service-item .service-text {
+  font-size: small;
+  text-align: justify;
 }
 
 @media (max-width: 950px) {
@@ -280,6 +263,9 @@ section.services .services-box .service-item[data-title="Deployment"] {
 }
 
 @media (max-width: 600px) {
+  header .social_icons {
+    background-color: green;
+  }
   section.services .services-box {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
