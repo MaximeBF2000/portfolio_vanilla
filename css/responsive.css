@@ -13,7 +13,19 @@
 
 @media (max-width: 600px) {
   header .social_icons {
-    background-color: green;
+    width: 75%;
+  }
+  section.estimation {
+    display: block;
+  }
+  section.estimation .estimation_text, section.estimation .estimation_callToAction {
+    width: 100%;
+  }
+  section.estimation .estimation_text h2 {
+    text-align: center;
+  }
+  section.estimation .estimation_text p {
+    margin: 1rem 0;
   }
   section.services .services-box {
     -ms-grid-columns: (1fr)[1];

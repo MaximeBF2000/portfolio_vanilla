@@ -91,9 +91,13 @@ section.estimation{
 
   .estimation_text{
     width: 70%;
+    margin: 10px;
     h2{
       font-size: $fs-title;
       font-family: $ff-secondary;
+    }
+    p{
+      text-align: justify;
     }
   }
   .estimation_callToAction{
@@ -101,16 +105,15 @@ section.estimation{
     width: 30%;
   }
 }
+h2.title{
+  font-family: $ff-secondary;
+  text-align: right;
+  margin-bottom: 3rem;
+  font-size: $fs-title;
+}
 section.services{
-  padding: 4rem;
+  padding: $section-padding;
   width: 100%;
-
-  h2{
-    font-family: $ff-secondary;
-    text-align: right;
-    margin-bottom: 3rem;
-    font-size: $fs-title;
-  }
 
   .services-box{
     width: 90%;
@@ -151,6 +154,23 @@ section.services{
         font-size: small;
         text-align: justify;
       }
+    }
+  }
+}
+
+section.timeline{
+  width: 100%;
+  padding: $section-padding;
+  
+  .timeline_container{
+    width: 100%;
+    @extend .container;
+
+    .line{
+      width: 0px;
+      height: 200px;
+      // background-color: #000;
+      box-shadow: 0 0 3px 2px $secondary;
     }
   }
 }

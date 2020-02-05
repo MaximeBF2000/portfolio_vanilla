@@ -12,9 +12,22 @@
 
 @media (max-width: 600px){
   header .social_icons{
-    background-color: green;
+    width: 75%;
   }
-
+  section.estimation{
+    display: block;
+    .estimation_text, .estimation_callToAction{
+      width: 100%;
+    }
+    .estimation_text{
+      h2{
+        text-align: center;
+      }
+      p{
+        margin: 1rem 0;
+      }
+    }
+  }
   section.services .services-box{
     grid-template-columns: repeat(1, 1fr);
   }
