@@ -2,12 +2,18 @@
   section.services .services-box {
     width: 100%;
   }
+  section.hire_reasons .reasons-box {
+    width: 50%;
+  }
 }
 
 @media (max-width: 850px) {
   section.services .services-box {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  section.hire_reasons .reasons-box {
+    width: 60%;
   }
 }
 
@@ -30,6 +36,9 @@
   section.services .services-box {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  section.hire_reasons .reasons-box {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

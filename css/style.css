@@ -48,7 +48,7 @@ a {
   }
 }
 
-.container, section.timeline .timeline_container {
+.container, section.hire_reasons .reasons-box, section.hire_reasons .reasons-box .reason, section.hire_reasons .reasons-box .reason .reason-icon {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,7 +243,7 @@ section.services .services-box .service-item .service-logo {
   margin: 2rem 0;
 }
 
-section.services .services-box .service-item .service-title {
+section.services .services-box .service-item h3.service-title {
   font-weight: bold;
   text-align: center;
   margin-bottom: 1rem;
@@ -254,25 +254,58 @@ section.services .services-box .service-item .service-text {
   text-align: justify;
 }
 
-section.timeline {
+section.hire_reasons {
   width: 100%;
   padding: 4rem;
 }
 
-section.timeline .timeline_container {
-  width: 100%;
+section.hire_reasons .reasons-box {
+  width: 40%;
+  margin: 3rem auto;
 }
 
-section.timeline .timeline_container .line {
-  width: 0px;
-  height: 200px;
-  -webkit-box-shadow: 0 0 3px 2px #D3D3D3;
-          box-shadow: 0 0 3px 2px #D3D3D3;
+section.hire_reasons .reasons-box .reason {
+  margin-top: 3rem;
+}
+
+section.hire_reasons .reasons-box .reason .reason-icon {
+  font-size: 5rem;
+  color: #FF5733;
+}
+
+section.hire_reasons .reasons-box .reason .reason-title {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+section.hire_reasons .reasons-box .reason .reason-text {
+  text-align: justify;
+}
+
+section.hire_reasons .reasons-box .reason-arrow {
+  position: relative;
+  display: block;
+  width: 5px;
+  height: 100px;
+  margin-top: 1.5rem;
+  background-color: #D3D3D3;
+}
+
+section.hire_reasons .reasons-box .reason-arrow::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  bottom: -23px;
+  border: 1rem solid transparent;
+  border-top-color: #D3D3D3;
 }
 
 @media (max-width: 950px) {
   section.services .services-box {
     width: 100%;
+  }
+  section.hire_reasons .reasons-box {
+    width: 50%;
   }
 }
 
@@ -280,6 +313,9 @@ section.timeline .timeline_container .line {
   section.services .services-box {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  section.hire_reasons .reasons-box {
+    width: 60%;
   }
 }
 
@@ -302,6 +338,9 @@ section.timeline .timeline_container .line {
   section.services .services-box {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  section.hire_reasons .reasons-box {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

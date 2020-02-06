@@ -145,7 +145,7 @@ section.services{
         font-size: 2rem;
         margin: 2rem 0;
       }
-      .service-title{
+      h3.service-title{
         font-weight: bold;
         text-align: center;
         margin-bottom: 1rem;
@@ -158,19 +158,49 @@ section.services{
   }
 }
 
-section.timeline{
+section.hire_reasons{
   width: 100%;
   padding: $section-padding;
-  
-  .timeline_container{
-    width: 100%;
+
+  .reasons-box{
+    width: 40%;
+    margin: 3rem auto;
     @extend .container;
 
-    .line{
-      width: 0px;
-      height: 200px;
-      // background-color: #000;
-      box-shadow: 0 0 3px 2px $secondary;
+    .reason{
+      margin-top: 3rem;
+      @extend .container;
+
+      .reason-icon{
+        @extend .container;
+        font-size: 5rem;
+        color: $primary;
+      }
+      .reason-title{
+        margin: 2rem 0;
+        text-align: center;
+      }
+      .reason-text{
+        text-align: justify;
+      }
+    }
+
+    .reason-arrow{
+      position: relative;
+      display: block;
+      width: 5px;
+      height: 100px;
+      margin-top: 1.5rem;
+      background-color: $secondary;
+
+      &::before{
+        content: "";
+        position: absolute;
+        left: -13px;
+        bottom: -23px;
+        border: 1rem solid transparent;
+        border-top-color: $secondary;
+      }
     }
   }
 }
