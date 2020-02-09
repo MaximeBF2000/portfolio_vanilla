@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto&display=swap');
-@import "./config.scss";
+@import "./scss/config.scss";
+@import "./scss/autowriting.scss";
 
 
 .container{
@@ -95,6 +96,7 @@ section.estimation{
     h2{
       font-size: $fs-title;
       font-family: $ff-secondary;
+      margin-bottom: .3rem;
     }
     p{
       text-align: justify;
@@ -158,6 +160,16 @@ section.services{
   }
 }
 
+.fade{
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s;
+}
+.faded{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 section.hire_reasons{
   width: 100%;
   padding: $section-padding;
@@ -177,6 +189,7 @@ section.hire_reasons{
         color: $primary;
       }
       .reason-title{
+        width: 75%;
         margin: 2rem 0;
         text-align: center;
       }
@@ -206,4 +219,4 @@ section.hire_reasons{
 }
 
 
-@import "./responsive.scss"
+@import "./scss/responsive.scss"

@@ -48,6 +48,92 @@ a {
   }
 }
 
+/* Variables */
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Animations */
+@keyframes arrow_bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  60% {
+    -webkit-transform: translateY(-7.5px);
+            transform: translateY(-7.5px);
+  }
+}
+
+.autowritting {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.1em solid #FF5733;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #FF5733;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #FF5733;
+  }
+}
+
 .container, section.hire_reasons .reasons-box, section.hire_reasons .reasons-box .reason, section.hire_reasons .reasons-box .reason .reason-icon {
   width: 100%;
   display: -webkit-box;
@@ -183,6 +269,7 @@ section.estimation .estimation_text {
 section.estimation .estimation_text h2 {
   font-size: x-large;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: .3rem;
 }
 
 section.estimation .estimation_text p {
@@ -254,6 +341,20 @@ section.services .services-box .service-item .service-text {
   text-align: justify;
 }
 
+.fade {
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.faded {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 section.hire_reasons {
   width: 100%;
   padding: 4rem;
@@ -274,6 +375,7 @@ section.hire_reasons .reasons-box .reason .reason-icon {
 }
 
 section.hire_reasons .reasons-box .reason .reason-title {
+  width: 75%;
   margin: 2rem 0;
   text-align: center;
 }
