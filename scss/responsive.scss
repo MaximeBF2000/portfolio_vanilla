@@ -17,6 +17,12 @@
 }
 
 @media (max-width: 600px){
+  header .presentation h1{
+    font-size: x-large;
+  }
+  header .presentation p{
+    font-size: medium;
+  }
   header .social_icons{
     width: 75%;
   }

@@ -422,6 +422,12 @@ section.hire_reasons .reasons-box .reason-arrow::before {
 }
 
 @media (max-width: 600px) {
+  header .presentation h1 {
+    font-size: x-large;
+  }
+  header .presentation p {
+    font-size: medium;
+  }
   header .social_icons {
     width: 75%;
   }
