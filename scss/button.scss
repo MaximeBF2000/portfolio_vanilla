@@ -1,0 +1,16 @@
+@import "./config.scss";
+
+.btn{
+  padding: 10px 15px;
+  border-radius: .25rem;
+}
+.btn-primary{
+  color: white;
+  background-color: $primary;
+}
+.btn-zoom{
+  transition: 0.3s;
+}
+.btn-zoom:hover, .btn-zoom:focus{
+  transform: scale(1.15);
+}

@@ -23,6 +23,22 @@ a{
 }
 
 
+/* Class */
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* Animations */
 @keyframes arrow_bounce {
 	0%, 20%, 50%, 80%, 100% {
