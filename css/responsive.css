@@ -18,6 +18,15 @@
 }
 
 @media (max-width: 600px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 2rem;
+  }
+  .arrow_down {
+    display: none;
+  }
   header .presentation h1 {
     font-size: x-large;
   }
