@@ -10,11 +10,22 @@
   <script src="./app.js" defer></script>
 </head>
 <body>
-  <i class="fas fa-bars hamburger_btn" onclick="menuShow()"></i>
-  <nav>
+  <!-- NAVIGATION SYSTEM -->
 
+  <nav>
+    <ul>
+      <li data-tooltip="Estimer votre projet"><a href="#estimation_section">E</a></li>
+      <li data-tooltip="Services proposées"><a href="#section_services">S</a></li>
+      <li data-tooltip="Vos avantages"><a href="#section_reasons">A</a></li>
+      <li data-tooltip="Me contacter"><a href="#section_contact">C</a></li>
+      <span class="showNav" onclick="showNav(this)"><i class="fas fa-caret-right"></i></span>
+    </ul>
   </nav>
+
+  <button class="darkmodeBtn" onclick="toggleDarkmode()"><i class="fas fa-moon"></i></button>
   <main>
+    <!-- HEADER -->
+
     <header class="container">
       <img class="profil_pic" src="./img/profil_pic.png" alt="profil pic Maxime FERRET">
       <div class="presentation">
@@ -29,11 +40,15 @@
       </div>
       <a href="#estimation_section" class="arrow_down"><i class="fas fa-chevron-down"></i></i></a>
     </header>
+
+
+    <!-- SECTION ESTIMATION -->
+
     <section class="estimation" id="estimation_section">
       <div class="estimation_text">
         <h2>Vous avez un projet ?</h2>
         <p>
-          Vous voulez étendre votre entreprise au monde du web ? Ou peut être que vous avez cette idée de projet que vous voulez débuter ? Dans tout les cas, je peux sûrement vous aider ! Contactez moi à tout moment pour découvrir le potentiel de ce projet et comment je pourrais vous aider à l'intégration digital de celui-ci.
+          Vous voulez étendre votre entreprise au monde du web . Ou peut-être que vous avez cette idée de projet que vous voulez débuter . Dans tous les cas, je peux sûrement vous aider ! Contactez-moi à tout moment pour découvrir le potentiel de ce projet et comment je pourrais vous aider à l'intégration digitale de celui-ci.
   
         </p>
       </div>
@@ -41,7 +56,11 @@
         <a href="." class="btn btn-primary btn-zoom">Estimer mon projet (GRATUIT !)</a>
       </div>
     </section>
-    <section class="services">
+
+
+    <!-- SECTION SERVICES -->
+
+    <section class="services" id="section_services">
       <h2 class="title">Développer votre projet dans tout les domaines</h2>
       <div class="services-box">
         <div class="service-item" data-title="Web Design">
@@ -69,26 +88,30 @@
           <div class="service-logo"><i class="fas fa-search"></i></div>
           <h3 class="service-title"> Réferencement - SEO </h3>
           <p class="service-text">
-            Passez devant vos concurrents avec une plateforme optimizée pour le référencement sur les moteurs de recherches. Soyez le numéro 1 des recherches Google !
+            Passez devant vos concurrents avec une plateforme optimisée pour le référencement sur les moteurs de recherche. Soyez le numéro 1 des recherches Google !
           </p>
         </div>
         <div class="service-item" data-title="Social Medias">
           <div class="service-logo"><i class="fas fa-users"></i></div>
           <h3 class="service-title"> Réseaux sociaux </h3>
           <p class="service-text">
-            Etendons la portée de votre entreprise et permettez à vos futurs nouveaux clients de venir à votre rencontre grâce à votre présence sur les réseaux sociaux.
+            Étendons la portée de votre entreprise et permettez à vos futurs nouveaux clients de venir à votre rencontre grâce à votre présence sur les réseaux sociaux.
           </p>
         </div>
         <div class="service-item" data-title="Deployment">
           <div class="service-logo"><i class="fas fa-desktop"></i></div>
           <h3 class="service-title"> Déploiement en ligne </h3>
           <p class="service-text">
-            Votre site est prêt ! Deployons le rapidement pour vous faire profiter des nombreux avantages de votre nouvel présence sur le web.
+            Votre site est prêt ! Déployons le rapidement pour vous faire profiter des nombreux avantages de votre nouvelle présence sur le web.
           </p>
         </div>
       </div>
     </section>
-    <section class="hire_reasons">
+
+
+    <!-- SECTION AVANTAGES -->
+
+    <section class="hire_reasons" id="section_reasons">
       <h2 class="title"> Pourquoi vous devriez faire appel à un professionnel ? </h2>
       <div class="reasons-box">
   
@@ -96,7 +119,7 @@
           <div class="reason-icon"><i class="fas fa-user-plus"></i></div>
           <h3 class="reason-title">Attirer de l'attention sur votre projet </h3>
           <p class="reason-text">
-            Agrandissez votre source de traffic en vous installant sur la plateforme utilisée par près de 4 milliards de personnes dans le monde. 
+            Agrandissez votre source de trafic en vous installant sur la plateforme utilisée par près de 4 milliards de personnes dans le monde.
           </p>
         </div>
         <span class="reason-arrow fade"></span>
@@ -104,7 +127,7 @@
           <div class="reason-icon"><i class="fas fa-copyright"></i></div>
           <h3 class="reason-title">Développer une image de marque haute qualité</h3>
           <p class="reason-text">
-            Multipliez le nombre de vos clients et augmentez drastiquement la fidélisation de ceux-ci avec une identité visuel importante, inspirant confiance à ceux-ci.
+            Multipliez le nombre de vos clients et augmentez drastiquement la fidélisation de ceux-ci avec une identité visuelle importante, inspirant confiance à ceux-ci.
           </p>
         </div>
         <span class="reason-arrow fade"></span>
@@ -120,12 +143,30 @@
           <div class="reason-icon"><i class="fas fa-dollar-sign"></i></div>
           <h3 class="reason-title">Béneficier des avantages d'une réel présence sur le web</h3>
           <p class="reason-text">
-            Profitez d'une nouvelle source de traffic et d'un lot d'outils de qualité vous permettant d'élever votre projet au dessus de votre conccurence.
-            Félicitation ! Vous avez propulsé votre projet sur le web !
+            Profitez d'une nouvelle source de trafic et d'un lot d'outils de qualité vous permettant d'élever votre projet au-dessus de votre concurrence. Félicitations ! Vous avez propulsé votre projet sur le web !
           </p>
         </div>
       </div>
     </section>  
+
+
+    <!-- SECTION CONTACT -->
+
+    <section class="contact_section"  id="section_contact">
+      <h2 class="title">Me contacter</h2>
+      <form action="." class="contact-form">
+        <div class="contact-main">
+          <textarea class="main-text" placeholder="Votre message..." rows="14"></textarea>
+        </div>
+        <div class="contact-basic">
+          <input type="text" placeholder="Nom..."/>
+          <input type="mail" placeholder="Email..."/>
+          <input type="text" placeholder="Objet..."/>
+          <input type="submit" value="Envoyer">
+        </div>
+      </form>
+    </section>
+
   </main>
 </body>
 </html>

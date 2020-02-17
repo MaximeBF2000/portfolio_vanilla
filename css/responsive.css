@@ -15,9 +15,29 @@
   section.hire_reasons .reasons-box {
     width: 60%;
   }
+  .contact-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-basic, .contact-main {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 600px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 2rem;
+  }
+  .arrow_down {
+    display: none;
+  }
   header .presentation h1 {
     font-size: x-large;
   }

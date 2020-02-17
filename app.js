@@ -1,6 +1,7 @@
 console.log("app.js is loaded")
 const d = document
 const w = window
+const b = d.body
 
 
 // -----------------------------  Variables declaration - General scope  -----------------------------
@@ -10,13 +11,11 @@ const fade_els = d.querySelectorAll(".fade")
 let autoWritingCount = 0
 
 // DynamicNav
-const mainContent = d.querySelector("main")
 const nav = d.querySelector("nav")
-const hamburgerBtn = d.querySelector(".hamburger_btn")
-const header = d.querySelector("header")
-const navWidth = 20
 let nav_isShowed = false
-let headerObserver_switch = true
+
+// Darkmode
+let is_inDarkmode = false
 
 
 // -----------------------------  Functions Creation  -----------------------------
@@ -25,7 +24,7 @@ let headerObserver_switch = true
 // FadeUp
 const fadeEffect = () => {
   fade_els.forEach(e => {
-    if((e.getBoundingClientRect().top - (window.innerHeight - (15/100)*window.innerHeight) <= 0)){
+    if((e.getBoundingClientRect().top - (w.innerHeight - (15/100)*w.innerHeight) <= 0)){
       e.classList.add("faded")
     } else if(e.classList.contains("faded")){
       e.classList.remove("faded")
@@ -34,33 +33,23 @@ const fadeEffect = () => {
 }
 
 // DynamicNav
-const menuShow = () => {
+const showNav = target => {
   if(!nav_isShowed){
-    nav.style.width = navWidth + "%"
-    mainContent.style.width = (100 - navWidth) + "%"
-    mainContent.style.marginLeft = navWidth + "%"
+    nav.style.transform = "translate(0, -50%)"
+    target.innerHTML = "<i class='fas fa-caret-left'></i>"
     nav_isShowed = true
   } else {
-    mainContent.style.width = 100 + "%"
-    mainContent.style.marginLeft = 0 + "%"
-    nav.style.width = 0 + "%"
+    nav.style.transform = "translate(-100%, -50%)"
+    target.innerHTML = "<i class='fas fa-caret-right'></i>"
     nav_isShowed = false
   }
+  
 }
 
-const headerObeserverOptions = {
-  rootMargin: '0px'
+// DarkMode
+const toggleDarkmode = () => {
+  b.classList.toggle("darkmode")
 }
-const headerObeserver = new IntersectionObserver(() => {
-  if(headerObserver_switch && w.scrollY < w.innerHeight){
-    hamburgerBtn.style.color = "#D3D3D3"
-    headerObserver_switch = false
-  } else {
-    hamburgerBtn.style.color = "#FF5733"
-    headerObserver_switch = true
-  }
-}, headerObeserverOptions)
-headerObeserver.observe(header)
 
 
 // -----------------------------  Functions Calls - Event Listeners  -----------------------------
