@@ -675,6 +675,11 @@ section.contact .contact-form .contact-basic {
   height: 350px;
 }
 
+section.contact .contact-form .contact-basic .phone {
+  width: 100%;
+  text-align: center;
+}
+
 section.contact .contact-form .contact-basic input {
   display: block;
   width: 100%;

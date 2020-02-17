@@ -19,7 +19,6 @@ let is_inDarkmode = false
 
 // Send Email
 const form = d.querySelector(".contact-form")
-const input_name = d.querySelector(".contact-form .name")
 const input_mail = d.querySelector(".contact-form .mail")
 const input_object = d.querySelector(".contact-form .object")
 const input_message = d.querySelector(".contact-form .main-text")
