@@ -17,6 +17,13 @@ let nav_isShowed = false
 // Darkmode
 let is_inDarkmode = false
 
+// Send Email
+const form = d.querySelector(".contact-form")
+const input_name = d.querySelector(".contact-form .name")
+const input_mail = d.querySelector(".contact-form .mail")
+const input_object = d.querySelector(".contact-form .object")
+const input_message = d.querySelector(".contact-form .main-text")
+
 
 // -----------------------------  Functions Creation  -----------------------------
 
@@ -51,6 +58,20 @@ const toggleDarkmode = () => {
   b.classList.toggle("darkmode")
 }
 
+// Send Email
+
+const sendEmail = event => {
+  event.preventDefault()
+  Email.send({
+    SecureToken : "60a84dae-0a62-4f1f-aed6-6631c4c7da68",
+    To : 'maxime.bounaas@gmail.com',
+    From : input_mail,
+    Subject : input_object,
+    Body : input_message
+  }).then(console.log("email sent !"))
+}
+
 
 // -----------------------------  Functions Calls - Event Listeners  -----------------------------
 window.addEventListener("scroll", fadeEffect)
+form.addEventListener("submit", sendEmail)

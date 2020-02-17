@@ -761,7 +761,7 @@ section.contact .contact-form .contact-main .main-text {
   section.estimation .estimation_text p {
     margin: 1rem 0;
   }
-  section.services, section.hire_reasons, section.contact {
+  section.hire_reasons, section.contact {
     padding: 2rem;
   }
   section.services .services-box {
