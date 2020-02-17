@@ -13,9 +13,12 @@ let autoWritingCount = 0
 // DynamicNav
 const nav = d.querySelector("nav")
 let nav_isShowed = false
+<<<<<<< HEAD
 
 // Darkmode
 let is_inDarkmode = false
+=======
+>>>>>>> 00b56b355216dfe8ff9d3a2b9f4fb874269e1c4b
 
 
 // -----------------------------  Functions Creation  -----------------------------
@@ -46,11 +49,14 @@ const showNav = target => {
   
 }
 
+<<<<<<< HEAD
 // DarkMode
 const toggleDarkmode = () => {
   b.classList.toggle("darkmode")
 }
 
+=======
+>>>>>>> 00b56b355216dfe8ff9d3a2b9f4fb874269e1c4b
 
 // -----------------------------  Functions Calls - Event Listeners  -----------------------------
 window.addEventListener("scroll", fadeEffect)
