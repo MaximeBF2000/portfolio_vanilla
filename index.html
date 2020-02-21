@@ -155,13 +155,13 @@
 
     <section class="contact"  id="section_contact">
       <h2 class="title">Me contacter</h2>
-      <form action="." class="contact-form">
+      <form action="." class="contact-form" method="POST" data-netfliy="true">
         <div class="contact-main">
-          <textarea class="main-text" placeholder="Votre message..." rows="14"></textarea>
+          <textarea name="message" class="main-text" placeholder="Votre message..." rows="14"></textarea>
         </div>
         <div class="contact-basic">
-          <input class="mail" type="mail" placeholder="Email..."/>
-          <input class="object" type="text" placeholder="Objet..."/>
+          <input class="name" type="text" placeholder="Nom..."/>
+          <input class="email" type="email" placeholder="Email..."/>
           <a class="phone" href="tel:+33665692685"><i class="fas fa-phone"></i> 06-65-69-26-85 </a>
           <input type="submit" value="Envoyer">
         </div>

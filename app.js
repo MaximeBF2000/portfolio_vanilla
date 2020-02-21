@@ -61,13 +61,18 @@ const toggleDarkmode = () => {
 
 const sendEmail = event => {
   event.preventDefault()
+  console.log(`
+    mail: ${input_mail.value},
+    subject: ${input_object.value},
+    msg: ${input_message.value}
+  `)
   Email.send({
     SecureToken : "60a84dae-0a62-4f1f-aed6-6631c4c7da68",
     To : 'maxime.bounaas@gmail.com',
-    From : input_mail,
-    Subject : input_object,
-    Body : input_message
-  }).then(console.log("email sent !"))
+    From : input_mail.value,
+    Subject : input_object.value,
+    Body : input_message.value
+  }).then(console.log("email sent !")).catch(err => console.log("Error: ", err))
 }
 
 
