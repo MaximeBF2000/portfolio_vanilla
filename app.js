@@ -57,25 +57,6 @@ const toggleDarkmode = () => {
   b.classList.toggle("darkmode")
 }
 
-// Send Email
-
-const sendEmail = event => {
-  event.preventDefault()
-  console.log(`
-    mail: ${input_mail.value},
-    subject: ${input_object.value},
-    msg: ${input_message.value}
-  `)
-  Email.send({
-    SecureToken : "60a84dae-0a62-4f1f-aed6-6631c4c7da68",
-    To : 'maxime.bounaas@gmail.com',
-    From : input_mail.value,
-    Subject : input_object.value,
-    Body : input_message.value
-  }).then(console.log("email sent !")).catch(err => console.log("Error: ", err))
-}
-
 
 // -----------------------------  Functions Calls - Event Listeners  -----------------------------
 window.addEventListener("scroll", fadeEffect)
-form.addEventListener("submit", sendEmail)
